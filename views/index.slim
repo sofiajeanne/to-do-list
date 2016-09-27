@@ -1,0 +1,8 @@
+form.new action="/new/list" method="POST"
+  input type="text" name="list[name]"
+  input type="submit" value="+ List"
+
+
+u1.lists
+  - @lists.each do |list|
+    == slim :list, locals: { list: list }
